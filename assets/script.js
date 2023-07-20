@@ -3,7 +3,6 @@ window.addEventListener("DOMContentLoaded", (event) => {
 });
 
 
-
 $(function () {
     $('.saveBtn').on("click", function () {
         var time = $(this).parent().attr('id');
@@ -13,9 +12,26 @@ $(function () {
 
     })
 
+    function colorChange() {
+        var currentTime = dayjs().hour()
 
+        $(".time-block").each(function () {
+            var divTime = parseInt($(this).attr("id").split("-")[1])
+            if (divTime < currentTime) {
+                $(this).addClass("past");
+            } else if (divTime === currentTime) {
+                $(this).removeClass("past")
+                $(this).addClass("present");
+            } else {
+                $(this).removeClass("past")
+                $(this).removeClass("present")
+                $(this).addClass("future");
+            }
 
+        });
+    }
 
+    colorChange();
 
     $("#hour-9 .description").text(localStorage.getItem("hour-9"))
     $("#hour-10 .description").text(localStorage.getItem("hour-10"))
