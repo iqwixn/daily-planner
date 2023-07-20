@@ -25,11 +25,11 @@ The saved entry persists if you refresh the page.
 
 # Website Link
 
-
+https://iqwixn.github.io/daily-planner/
 
 # Website screenshot
 
-![Screenshot of Horiseon website](assets/images/.jpg)
+![Screenshot of Daily Planner website](assets/images/daily-planner.png)
 
 
 GIVEN I am using a daily planner to create a schedule
